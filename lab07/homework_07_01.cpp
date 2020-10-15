@@ -9,6 +9,7 @@ class AnyString
 public:
 	AnyString(const std::string &anyString) : anyString(anyString) {}
 	friend std::ostream &operator<<(std ::ostream &os, const AnyString &a);
+	//연산자 <<에 대한 오버로딩 선언
 
 	std::string getAnyString()
 	{
@@ -16,6 +17,7 @@ public:
 	}
 };
 
+// <<에 대해 재정의
 std ::ostream &operator<<(std::ostream &os, const AnyString &a)
 {
 	os << a.anyString << std ::endl;
